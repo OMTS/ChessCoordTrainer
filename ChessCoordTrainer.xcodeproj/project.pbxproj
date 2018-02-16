@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FF289422036146F0051B55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF289412036146F0051B55D /* AppDelegate.swift */; };
+		0FF289442036146F0051B55D /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF289432036146F0051B55D /* BoardViewController.swift */; };
+		0FF289462036146F0051B55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF289452036146F0051B55D /* Assets.xcassets */; };
+		0FF289492036146F0051B55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF289472036146F0051B55D /* Main.storyboard */; };
+		0FF289552036146F0051B55D /* ChessCoordTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF289542036146F0051B55D /* ChessCoordTrainerTests.swift */; };
+		0FF28960203614700051B55D /* ChessCoordTrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF2895F203614700051B55D /* ChessCoordTrainerUITests.swift */; };
+		0FF28972203634FF0051B55D /* SquareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF28970203634FF0051B55D /* SquareItem.swift */; };
+		0FF28973203634FF0051B55D /* SquareItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF28971203634FF0051B55D /* SquareItem.xib */; };
+		0FF28978203665000051B55D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF28977203665000051B55D /* Square.swift */; };
+		0FF2897B203667520051B55D /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF2897A203667520051B55D /* Logic.swift */; };
+		0FF289832036817E0051B55D /* beep-07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0FF289812036817E0051B55D /* beep-07.wav */; };
+		0FF289842036817E0051B55D /* beep-08b.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0FF289822036817E0051B55D /* beep-08b.wav */; };
+		438EF24A825DCD4923B99680 /* Pods_ChessCoordTrainerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB968D76816BD848BE6902DA /* Pods_ChessCoordTrainerUITests.framework */; };
+		4BFB32551E8417F3CA18D482 /* Pods_ChessCoordTrainerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74239087C52096180C76CD3 /* Pods_ChessCoordTrainerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FF289512036146F0051B55D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FF289362036146F0051B55D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FF2893D2036146F0051B55D;
+			remoteInfo = ChessCoordTrainer;
+		};
+		0FF2895C203614700051B55D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FF289362036146F0051B55D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FF2893D2036146F0051B55D;
+			remoteInfo = ChessCoordTrainer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FF2893E2036146F0051B55D /* ChessCoordTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessCoordTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF289412036146F0051B55D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0FF289432036146F0051B55D /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		0FF289452036146F0051B55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FF289482036146F0051B55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0FF2894A2036146F0051B55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF2894B2036146F0051B55D /* ChessCoordTrainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChessCoordTrainer.entitlements; sourceTree = "<group>"; };
+		0FF289502036146F0051B55D /* ChessCoordTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessCoordTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF289542036146F0051B55D /* ChessCoordTrainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessCoordTrainerTests.swift; sourceTree = "<group>"; };
+		0FF289562036146F0051B55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF2895B203614700051B55D /* ChessCoordTrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessCoordTrainerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF2895F203614700051B55D /* ChessCoordTrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessCoordTrainerUITests.swift; sourceTree = "<group>"; };
+		0FF28961203614700051B55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF28970203634FF0051B55D /* SquareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareItem.swift; sourceTree = "<group>"; };
+		0FF28971203634FF0051B55D /* SquareItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareItem.xib; sourceTree = "<group>"; };
+		0FF28977203665000051B55D /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		0FF2897A203667520051B55D /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		0FF289812036817E0051B55D /* beep-07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-07.wav"; sourceTree = "<group>"; };
+		0FF289822036817E0051B55D /* beep-08b.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-08b.wav"; sourceTree = "<group>"; };
+		14AF7E308AEDCF63F6FA6169 /* Pods-ChessCoordTrainerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessCoordTrainerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChessCoordTrainerUITests/Pods-ChessCoordTrainerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		36EC0913281BB195003B8A0B /* Pods-ChessCoordTrainerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessCoordTrainerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChessCoordTrainerUITests/Pods-ChessCoordTrainerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		515F2014A9B0E801133299A4 /* Pods_ChessCoordTrainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChessCoordTrainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB968D76816BD848BE6902DA /* Pods_ChessCoordTrainerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChessCoordTrainerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C22CE6319DBF98D75788AD98 /* Pods-ChessCoordTrainerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessCoordTrainerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChessCoordTrainerTests/Pods-ChessCoordTrainerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C438BF6D0FD7C02C1D53643C /* Pods-ChessCoordTrainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessCoordTrainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChessCoordTrainer/Pods-ChessCoordTrainer.debug.xcconfig"; sourceTree = "<group>"; };
+		D74239087C52096180C76CD3 /* Pods_ChessCoordTrainerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChessCoordTrainerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E463CD666C702CDEA18C14D8 /* Pods-ChessCoordTrainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessCoordTrainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChessCoordTrainer/Pods-ChessCoordTrainer.release.xcconfig"; sourceTree = "<group>"; };
+		EFBB0FD22A0D2C7BEB4B4985 /* Pods-ChessCoordTrainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessCoordTrainerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChessCoordTrainerTests/Pods-ChessCoordTrainerTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0FF2893B2036146F0051B55D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF2894D2036146F0051B55D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFB32551E8417F3CA18D482 /* Pods_ChessCoordTrainerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF28958203614700051B55D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438EF24A825DCD4923B99680 /* Pods_ChessCoordTrainerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A106D1BBBA40DBB7476476C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C438BF6D0FD7C02C1D53643C /* Pods-ChessCoordTrainer.debug.xcconfig */,
+				E463CD666C702CDEA18C14D8 /* Pods-ChessCoordTrainer.release.xcconfig */,
+				C22CE6319DBF98D75788AD98 /* Pods-ChessCoordTrainerTests.debug.xcconfig */,
+				EFBB0FD22A0D2C7BEB4B4985 /* Pods-ChessCoordTrainerTests.release.xcconfig */,
+				14AF7E308AEDCF63F6FA6169 /* Pods-ChessCoordTrainerUITests.debug.xcconfig */,
+				36EC0913281BB195003B8A0B /* Pods-ChessCoordTrainerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0FF289352036146F0051B55D = {
+			isa = PBXGroup;
+			children = (
+				0FF289402036146F0051B55D /* ChessCoordTrainer */,
+				0FF289532036146F0051B55D /* ChessCoordTrainerTests */,
+				0FF2895E203614700051B55D /* ChessCoordTrainerUITests */,
+				0FF2893F2036146F0051B55D /* Products */,
+				0A106D1BBBA40DBB7476476C /* Pods */,
+				62E939C664075FD0F9EA1E88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0FF2893F2036146F0051B55D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FF2893E2036146F0051B55D /* ChessCoordTrainer.app */,
+				0FF289502036146F0051B55D /* ChessCoordTrainerTests.xctest */,
+				0FF2895B203614700051B55D /* ChessCoordTrainerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FF289402036146F0051B55D /* ChessCoordTrainer */ = {
+			isa = PBXGroup;
+			children = (
+				0FF28979203667480051B55D /* GameLogic */,
+				0FF28976203664F20051B55D /* Models */,
+				0FF2896D203633BB0051B55D /* Views */,
+				0FF289412036146F0051B55D /* AppDelegate.swift */,
+				0FF289432036146F0051B55D /* BoardViewController.swift */,
+				0FF289452036146F0051B55D /* Assets.xcassets */,
+				0FF289472036146F0051B55D /* Main.storyboard */,
+				0FF2894A2036146F0051B55D /* Info.plist */,
+				0FF289802036817E0051B55D /* Sounds */,
+				0FF2894B2036146F0051B55D /* ChessCoordTrainer.entitlements */,
+			);
+			path = ChessCoordTrainer;
+			sourceTree = "<group>";
+		};
+		0FF289532036146F0051B55D /* ChessCoordTrainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0FF289542036146F0051B55D /* ChessCoordTrainerTests.swift */,
+				0FF289562036146F0051B55D /* Info.plist */,
+			);
+			path = ChessCoordTrainerTests;
+			sourceTree = "<group>";
+		};
+		0FF2895E203614700051B55D /* ChessCoordTrainerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0FF2895F203614700051B55D /* ChessCoordTrainerUITests.swift */,
+				0FF28961203614700051B55D /* Info.plist */,
+			);
+			path = ChessCoordTrainerUITests;
+			sourceTree = "<group>";
+		};
+		0FF2896D203633BB0051B55D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FF28970203634FF0051B55D /* SquareItem.swift */,
+				0FF28971203634FF0051B55D /* SquareItem.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0FF28976203664F20051B55D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FF28977203665000051B55D /* Square.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0FF28979203667480051B55D /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				0FF2897A203667520051B55D /* Logic.swift */,
+			);
+			path = GameLogic;
+			sourceTree = "<group>";
+		};
+		0FF289802036817E0051B55D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0FF289812036817E0051B55D /* beep-07.wav */,
+				0FF289822036817E0051B55D /* beep-08b.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		62E939C664075FD0F9EA1E88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				515F2014A9B0E801133299A4 /* Pods_ChessCoordTrainer.framework */,
+				D74239087C52096180C76CD3 /* Pods_ChessCoordTrainerTests.framework */,
+				BB968D76816BD848BE6902DA /* Pods_ChessCoordTrainerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0FF2893D2036146F0051B55D /* ChessCoordTrainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FF28964203614700051B55D /* Build configuration list for PBXNativeTarget "ChessCoordTrainer" */;
+			buildPhases = (
+				0FF2893A2036146F0051B55D /* Sources */,
+				0FF2893B2036146F0051B55D /* Frameworks */,
+				0FF2893C2036146F0051B55D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChessCoordTrainer;
+			productName = ChessCoordTrainer;
+			productReference = 0FF2893E2036146F0051B55D /* ChessCoordTrainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0FF2894F2036146F0051B55D /* ChessCoordTrainerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FF28967203614700051B55D /* Build configuration list for PBXNativeTarget "ChessCoordTrainerTests" */;
+			buildPhases = (
+				922930AD0F4C9D88E696F254 /* [CP] Check Pods Manifest.lock */,
+				0FF2894C2036146F0051B55D /* Sources */,
+				0FF2894D2036146F0051B55D /* Frameworks */,
+				0FF2894E2036146F0051B55D /* Resources */,
+				65F17DFC255E9DF3BE065D7C /* [CP] Embed Pods Frameworks */,
+				1309FF8B63B193606DD3E421 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FF289522036146F0051B55D /* PBXTargetDependency */,
+			);
+			name = ChessCoordTrainerTests;
+			productName = ChessCoordTrainerTests;
+			productReference = 0FF289502036146F0051B55D /* ChessCoordTrainerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0FF2895A203614700051B55D /* ChessCoordTrainerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FF2896A203614700051B55D /* Build configuration list for PBXNativeTarget "ChessCoordTrainerUITests" */;
+			buildPhases = (
+				EEA7256AA22C5BC58AC9777A /* [CP] Check Pods Manifest.lock */,
+				0FF28957203614700051B55D /* Sources */,
+				0FF28958203614700051B55D /* Frameworks */,
+				0FF28959203614700051B55D /* Resources */,
+				3E5C05984DAA0B5D3F10F95C /* [CP] Embed Pods Frameworks */,
+				E7D3B19E2499238DB0DD13FA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FF2895D203614700051B55D /* PBXTargetDependency */,
+			);
+			name = ChessCoordTrainerUITests;
+			productName = ChessCoordTrainerUITests;
+			productReference = 0FF2895B203614700051B55D /* ChessCoordTrainerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0FF289362036146F0051B55D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "One More Thing Studio";
+				TargetAttributes = {
+					0FF2893D2036146F0051B55D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					0FF2894F2036146F0051B55D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0FF2893D2036146F0051B55D;
+					};
+					0FF2895A203614700051B55D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0FF2893D2036146F0051B55D;
+					};
+				};
+			};
+			buildConfigurationList = 0FF289392036146F0051B55D /* Build configuration list for PBXProject "ChessCoordTrainer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0FF289352036146F0051B55D;
+			productRefGroup = 0FF2893F2036146F0051B55D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FF2893D2036146F0051B55D /* ChessCoordTrainer */,
+				0FF2894F2036146F0051B55D /* ChessCoordTrainerTests */,
+				0FF2895A203614700051B55D /* ChessCoordTrainerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0FF2893C2036146F0051B55D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF28973203634FF0051B55D /* SquareItem.xib in Resources */,
+				0FF289462036146F0051B55D /* Assets.xcassets in Resources */,
+				0FF289492036146F0051B55D /* Main.storyboard in Resources */,
+				0FF289832036817E0051B55D /* beep-07.wav in Resources */,
+				0FF289842036817E0051B55D /* beep-08b.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF2894E2036146F0051B55D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF28959203614700051B55D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1309FF8B63B193606DD3E421 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainerTests/Pods-ChessCoordTrainerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E5C05984DAA0B5D3F10F95C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainerUITests/Pods-ChessCoordTrainerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65F17DFC255E9DF3BE065D7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainerTests/Pods-ChessCoordTrainerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		922930AD0F4C9D88E696F254 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChessCoordTrainerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D3B19E2499238DB0DD13FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainerUITests/Pods-ChessCoordTrainerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEA7256AA22C5BC58AC9777A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChessCoordTrainerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FF2893A2036146F0051B55D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF28978203665000051B55D /* Square.swift in Sources */,
+				0FF2897B203667520051B55D /* Logic.swift in Sources */,
+				0FF289442036146F0051B55D /* BoardViewController.swift in Sources */,
+				0FF289422036146F0051B55D /* AppDelegate.swift in Sources */,
+				0FF28972203634FF0051B55D /* SquareItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF2894C2036146F0051B55D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF289552036146F0051B55D /* ChessCoordTrainerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF28957203614700051B55D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF28960203614700051B55D /* ChessCoordTrainerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0FF289522036146F0051B55D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FF2893D2036146F0051B55D /* ChessCoordTrainer */;
+			targetProxy = 0FF289512036146F0051B55D /* PBXContainerItemProxy */;
+		};
+		0FF2895D203614700051B55D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FF2893D2036146F0051B55D /* ChessCoordTrainer */;
+			targetProxy = 0FF2895C203614700051B55D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0FF289472036146F0051B55D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FF289482036146F0051B55D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0FF28962203614700051B55D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0FF28963203614700051B55D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		0FF28965203614700051B55D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C438BF6D0FD7C02C1D53643C /* Pods-ChessCoordTrainer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChessCoordTrainer/ChessCoordTrainer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLEKY4JP87;
+				INFOPLIST_FILE = ChessCoordTrainer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omts.ChessCoordTrainer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		0FF28966203614700051B55D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E463CD666C702CDEA18C14D8 /* Pods-ChessCoordTrainer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChessCoordTrainer/ChessCoordTrainer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLEKY4JP87;
+				INFOPLIST_FILE = ChessCoordTrainer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omts.ChessCoordTrainer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		0FF28968203614700051B55D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C22CE6319DBF98D75788AD98 /* Pods-ChessCoordTrainerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLEKY4JP87;
+				INFOPLIST_FILE = ChessCoordTrainerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omts.ChessCoordTrainerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChessCoordTrainer.app/Contents/MacOS/ChessCoordTrainer";
+			};
+			name = Debug;
+		};
+		0FF28969203614700051B55D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFBB0FD22A0D2C7BEB4B4985 /* Pods-ChessCoordTrainerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLEKY4JP87;
+				INFOPLIST_FILE = ChessCoordTrainerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omts.ChessCoordTrainerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChessCoordTrainer.app/Contents/MacOS/ChessCoordTrainer";
+			};
+			name = Release;
+		};
+		0FF2896B203614700051B55D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14AF7E308AEDCF63F6FA6169 /* Pods-ChessCoordTrainerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLEKY4JP87;
+				INFOPLIST_FILE = ChessCoordTrainerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omts.ChessCoordTrainerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = ChessCoordTrainer;
+			};
+			name = Debug;
+		};
+		0FF2896C203614700051B55D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EC0913281BB195003B8A0B /* Pods-ChessCoordTrainerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLEKY4JP87;
+				INFOPLIST_FILE = ChessCoordTrainerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omts.ChessCoordTrainerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = ChessCoordTrainer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FF289392036146F0051B55D /* Build configuration list for PBXProject "ChessCoordTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FF28962203614700051B55D /* Debug */,
+				0FF28963203614700051B55D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FF28964203614700051B55D /* Build configuration list for PBXNativeTarget "ChessCoordTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FF28965203614700051B55D /* Debug */,
+				0FF28966203614700051B55D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FF28967203614700051B55D /* Build configuration list for PBXNativeTarget "ChessCoordTrainerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FF28968203614700051B55D /* Debug */,
+				0FF28969203614700051B55D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FF2896A203614700051B55D /* Build configuration list for PBXNativeTarget "ChessCoordTrainerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FF2896B203614700051B55D /* Debug */,
+				0FF2896C203614700051B55D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0FF289362036146F0051B55D /* Project object */;
+}
