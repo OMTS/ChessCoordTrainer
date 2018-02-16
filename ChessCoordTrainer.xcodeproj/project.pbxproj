@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0161131F53C238D0DCAC41A9 /* Pods_ChessCoordTrainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515F2014A9B0E801133299A4 /* Pods_ChessCoordTrainer.framework */; };
 		0FF289422036146F0051B55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF289412036146F0051B55D /* AppDelegate.swift */; };
 		0FF289442036146F0051B55D /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF289432036146F0051B55D /* BoardViewController.swift */; };
 		0FF289462036146F0051B55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF289452036146F0051B55D /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0161131F53C238D0DCAC41A9 /* Pods_ChessCoordTrainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FF28964203614700051B55D /* Build configuration list for PBXNativeTarget "ChessCoordTrainer" */;
 			buildPhases = (
+				1CD4A80D26B8771A934A57AD /* [CP] Check Pods Manifest.lock */,
 				0FF2893A2036146F0051B55D /* Sources */,
 				0FF2893B2036146F0051B55D /* Frameworks */,
 				0FF2893C2036146F0051B55D /* Resources */,
+				E8B95BF0EA1C2E0CA5BBC90A /* [CP] Embed Pods Frameworks */,
+				2FCCD566C0CAA8FE752C3066 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,6 +370,39 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainerTests/Pods-ChessCoordTrainerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1CD4A80D26B8771A934A57AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChessCoordTrainer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FCCD566C0CAA8FE752C3066 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainer/Pods-ChessCoordTrainer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3E5C05984DAA0B5D3F10F95C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,6 +464,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainerUITests/Pods-ChessCoordTrainerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8B95BF0EA1C2E0CA5BBC90A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainer/Pods-ChessCoordTrainer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChessCoordTrainer/Pods-ChessCoordTrainer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEA7256AA22C5BC58AC9777A /* [CP] Check Pods Manifest.lock */ = {

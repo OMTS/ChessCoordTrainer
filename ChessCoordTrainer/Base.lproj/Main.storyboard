@@ -1277,7 +1277,7 @@
                             </stackView>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xma-HH-h2f">
                                 <rect key="frame" x="58" y="69" width="344" height="19"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="25" tickMarkPosition="below" sliderType="linear" id="1J4-Ry-On7"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="50" doubleValue="25" tickMarkPosition="below" sliderType="linear" id="1J4-Ry-On7"/>
                                 <connections>
                                     <action selector="cpmChanged:" target="XfG-lQ-9wD" id="DKC-Tf-UaJ"/>
                                 </connections>

@@ -16,6 +16,11 @@ final class Logic {
     private var tempoTimer: Timer?
     private var sessionTimer: Timer?
     private var isWhitePerspective = true
+    private var nbOfTickInGameSession = 0
+
+    var passiveTickhandler: ((Int) -> ())?
+    var activeTickHandler: ((Square) -> ())?
+    var gameOverHandler: (() -> ())?
 
     enum GameError: Error {
         case thisIsNotGo
@@ -52,6 +57,7 @@ final class Logic {
 
     func startGame(cpm: Int, isWhitePerspective: Bool) {
         gameIsStarted = true
+        nbOfTickInGameSession = 0
         self.isWhitePerspective = isWhitePerspective
         sessionTimer = Timer.scheduledTimer(timeInterval: TimeInterval(60),
                                           target: self,
@@ -59,7 +65,7 @@ final class Logic {
                                           userInfo: nil,
                                           repeats: false)
 
-        tempoTimer = Timer.scheduledTimer(timeInterval: TimeInterval(Int((60 / cpm) * 2)),
+        tempoTimer = Timer.scheduledTimer(timeInterval: TimeInterval(Int(60 / cpm)),
                                      target: self,
                                      selector: #selector(tick),
                                      userInfo: nil,
@@ -77,7 +83,10 @@ final class Logic {
     private func stopTimer() {
         tempoTimer?.invalidate()
         tempoTimer = nil
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "GameOver"), object: nil)
+
+        if let handler = gameOverHandler {
+            handler()
+        }
     }
 
     @objc private func tick() {
@@ -85,9 +94,18 @@ final class Logic {
     }
 
     private func computeRandomItemNumber() {
-        let randomItemNumber = Int(arc4random() % 64)
-        let square = try! squareFromItem(itemNumber: randomItemNumber, whitePerspective: isWhitePerspective)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NewValue"), object: nil, userInfo: ["square": square])
+        if nbOfTickInGameSession % 2 == 1 && nbOfTickInGameSession > 1 {
+            let randomItemNumber = Int(arc4random() % 64)
+            let square = try! squareFromItem(itemNumber: randomItemNumber, whitePerspective: isWhitePerspective)
 
+            if let handler = activeTickHandler {
+                handler(square)
+            }
+        } else {
+            if let handler = passiveTickhandler {
+                handler(nbOfTickInGameSession)
+            }
+        }
+        nbOfTickInGameSession = nbOfTickInGameSession + 1
     }
 }

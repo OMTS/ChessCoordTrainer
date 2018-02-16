@@ -1,0 +1,6 @@
+framework module Pods_ChessCoordTrainer {
+  umbrella header "Pods-ChessCoordTrainer-umbrella.h"
+
+  export *
+  module * { export * }
+}

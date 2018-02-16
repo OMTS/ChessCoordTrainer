@@ -37,9 +37,7 @@ class BoardViewController: NSViewController {
         super.viewDidLoad()
 
         setupHudView()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(stopGame), name: NSNotification.Name(rawValue: "GameOver"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleNewSquareValue(notification:)), name: NSNotification.Name(rawValue: "NewValue"), object: nil)
+        configureGamePlay()
     }
 
     @IBAction func cpmChanged(_ sender: NSSlider) {
@@ -52,34 +50,7 @@ class BoardViewController: NSViewController {
         cpmSlider.isEnabled = false
         startButton.isEnabled = false
         gameLogic.startGame(cpm: cpmSlider.integerValue, isWhitePerspective: isWhitePlaying)
-    }
-
-    @objc fileprivate func stopGame() {
-        sideSwitch.isEnabled = true
-        showCoordSwitch.isEnabled = true
-        cpmSlider.isEnabled = true
-        startButton.isEnabled = true
-    }
-
-    @objc func handleNewSquareValue(notification: Notification) {
-        guard let value = notification.userInfo?["square"] as? Square else {
-            return
-        }
-        currentSquare = value
-        currentSquareLabel.stringValue = currentSquare!.name
-        playSound()
-        NSAnimationContext.runAnimationGroup({ (context) in
-            context.duration = 0.1
-            hudView.animator().alphaValue = 1.0
-        }) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                NSAnimationContext.runAnimationGroup({ (context) in
-                    context.duration = 0.2
-                    self.hudView.animator().alphaValue = 0.0
-                }, completionHandler: nil)
-            }
-        }
-    }
+ }
 
     @IBAction func switchSides(_ sender: NSButton) {
         if showCoordSwitch.state == NSControl.StateValue.on {
@@ -97,6 +68,43 @@ class BoardViewController: NSViewController {
             whiteRanksCoord.isHidden = true
             blackFilesCoord.isHidden = true
             blackRanksCoord.isHidden = true
+        }
+    }
+
+    fileprivate func configureGamePlay() {
+        gameLogic.passiveTickhandler = { nbOfTicks in
+            self.playSound(alternateSound: true)
+
+            if nbOfTicks < 3 {
+                self.currentSquareLabel.stringValue = "\(nbOfTicks + 1)"
+                NSAnimationContext.runAnimationGroup({ (context) in
+                    context.duration = 0.1
+                    self.hudView.animator().alphaValue = 1.0
+                }, completionHandler: nil)
+            }
+        }
+
+        gameLogic.activeTickHandler = { square in
+            self.currentSquare = square
+            self.currentSquareLabel.stringValue = self.currentSquare!.name
+            self.playSound()
+            NSAnimationContext.runAnimationGroup({ (context) in
+                context.duration = 0.1
+                self.hudView.animator().alphaValue = 1.0
+            }) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    NSAnimationContext.runAnimationGroup({ (context) in
+                        context.duration = 0.2
+                        self.hudView.animator().alphaValue = 0.0
+                    }, completionHandler: nil)
+                }
+            }
+        }
+        gameLogic.gameOverHandler = {
+            self.sideSwitch.isEnabled = true
+            self.showCoordSwitch.isEnabled = true
+            self.cpmSlider.isEnabled = true
+            self.startButton.isEnabled = true
         }
     }
 
@@ -122,14 +130,17 @@ class BoardViewController: NSViewController {
             blackRanksCoord.isHidden = false
         }
     }
-    fileprivate func playSound() {
-        let path = Bundle.main.path(forResource: "beep-07.wav", ofType:nil)!
+
+    fileprivate func playSound(alternateSound: Bool = false) {
+
+        let path = alternateSound ? Bundle.main.path(forResource: "beep-07.wav", ofType:nil)! : Bundle.main.path(forResource: "beep-08b.wav", ofType:nil)!
         let url = URL(fileURLWithPath: path)
 
         do {
             soundPlayer = try AVAudioPlayer(contentsOf: url)
             soundPlayer?.play()
         } catch {
+            print("Sound file nout found")
         }
     }
 }
