@@ -43,7 +43,7 @@ final class Logic {
     }
 
     func indexPathForItem(itemNumber: Int) throws -> IndexPath {
-        guard itemNumber >= 0 && itemNumber < 63 else {
+        guard itemNumber >= 0 && itemNumber <= 63 else {
             throw GameError.thisIsNotGo
         }
 
